@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Pet the Cat Online | Virtual Cat Petting Game</title>
+    <meta
+      name="description"
+      content="Play Pet the Cat online for free. Pick from 13 virtual cats, hear them purr, play with a feather wand or laser, and keep track of your visits in the Petting Journal."
+    />
+    <link rel="canonical" href="https://petthecatonline.github.io/" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <meta name="theme-color" content="#e8efdf" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://petthecatonline.github.io/" />
+    <meta property="og:title" content="Free Pet the Cat Online" />
+    <meta
+      property="og:description"
+      content="Spend a quiet minute with a virtual cat. Pick from 13 cats, give your favorite a few strokes, and listen for a purr."
+    />
+    <meta
+      property="og:image"
+      content="https://petthecatonline.github.io/pet-the-cat-daylight-room.webp"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="740" />
+    <meta property="og:image:alt" content="A black cat on a sunlit cushion in Pet the Cat" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQN4HJDTPK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SQN4HJDTPK");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Free Pet the Cat Online",
+        "url": "https://petthecatonline.github.io/",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "VideoGame",
+          "name": "Pet the Cat",
+          "url": "https://petthecatonline.github.io/",
+          "gamePlatform": "Web browser",
+          "genre": "Simulation",
+          "isAccessibleForFree": true,
+          "image": "https://petthecatonline.github.io/pet-the-cat-daylight-room.webp"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #23382e;
+        --muted: #485c50;
+        --accent: #365b42;
+        --sage: #e8efdf;
+        --paper: #fcfaf1;
+        --line: #b6c4ad;
+        --yellow: #f5df87;
+        --display: Georgia, "Times New Roman", serif;
+        font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      figure,
+      dl,
+      dd {
+        margin: 0;
+      }
+
+      body {
+        background: linear-gradient(var(--sage) 0 33rem, var(--paper) 33rem);
+      }
+
+      a {
+        color: inherit;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        text-decoration-thickness: 0.15em;
+      }
+
+      :focus-visible {
+        outline: 3px solid currentColor;
+        outline-offset: 4px;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .wrap {
+        width: min(72rem, calc(100% - 3rem));
+        margin-inline: auto;
+      }
+
+      .skip-link {
+        position: absolute;
+        z-index: 1;
+        inset: 0 auto auto 0;
+        padding: 0.75rem 1rem;
+        background: var(--paper);
+        transform: translateY(-120%);
+      }
+
+      .skip-link:focus {
+        transform: none;
+      }
+
+      .site-header,
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.5rem;
+      }
+
+      .site-header {
+        padding-block: 0.8rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-family: var(--display);
+        font-size: 1.35rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .wordmark img {
+        display: block;
+        border-radius: 50%;
+      }
+
+      .site-nav,
+      .footer-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.35rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 650;
+      }
+
+      .site-nav a,
+      .footer-links a {
+        padding-block: 0.4rem;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        align-items: end;
+        gap: 1.3rem 2.5rem;
+        margin-top: 1.25rem;
+        padding: clamp(1.5rem, 4vw, 3.25rem) clamp(1rem, 3.5vw, 2.75rem);
+        border: 1px solid var(--line);
+        border-radius: 1.3rem;
+        background: var(--sage);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(2.75rem, 7vw, 6.1rem);
+        font-weight: 400;
+        letter-spacing: -0.07em;
+      }
+
+      h1 em {
+        display: block;
+        color: var(--accent);
+        font-weight: 400;
+      }
+
+      .intro-copy {
+        max-width: 33ch;
+        padding-bottom: 0.35rem;
+      }
+
+      .intro-copy p {
+        font-size: clamp(1rem, 1.75vw, 1.2rem);
+        color: var(--muted);
+      }
+
+      .play-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.8rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1.3rem;
+        border: 1px solid var(--ink);
+        border-radius: 2rem;
+        background: var(--yellow);
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .play-link:hover {
+        background: #f9e9a8;
+      }
+
+      .player {
+        overflow: hidden;
+        margin-top: clamp(0.75rem, 2vw, 1.35rem);
+        border: 1px solid var(--ink);
+        border-radius: 1.3rem;
+        background: #fff8f0;
+        scroll-margin-top: 0.75rem;
+      }
+
+      .player-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.45rem 1rem;
+        padding: 0.55rem 1.15rem;
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      .player-bar h2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+
+      .player-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.1rem 1.15rem;
+        font-size: 0.9rem;
+      }
+
+      .player-actions a,
+      .player-actions button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.5rem;
+      }
+
+      .player-actions button {
+        padding: 0.25rem 0.75rem;
+        border: 1px solid #a1b09f;
+        border-radius: 2rem;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .player-actions button:hover {
+        background: var(--accent);
+      }
+
+      .player iframe {
+        display: block;
+        width: 100%;
+        height: clamp(39rem, 72vw, 51rem);
+        border: 0;
+        background: #fff8f0;
+      }
+
+      .player:fullscreen {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .player:fullscreen iframe {
+        flex: 1;
+        height: auto;
+        min-height: 0;
+      }
+
+      .section {
+        margin-top: clamp(3.25rem, 7vw, 6rem);
+      }
+
+      .section h2 {
+        font-size: clamp(2.2rem, 4.3vw, 3.7rem);
+        font-weight: 400;
+        letter-spacing: -0.052em;
+        text-wrap: balance;
+      }
+
+      .guide,
+      .faq {
+        display: grid;
+        grid-template-columns: 1.45fr 1fr;
+        align-items: start;
+        gap: 1.5rem clamp(2rem, 6vw, 6rem);
+      }
+
+      .guide h2 {
+        margin-bottom: 1.3rem;
+      }
+
+      .guide h3 {
+        margin: 1.2rem 0 0.35rem;
+        font-size: 1.45rem;
+      }
+
+      .guide p,
+      .faq p {
+        max-width: 62ch;
+        color: var(--muted);
+      }
+
+      .shortcuts {
+        padding: clamp(1.25rem, 3vw, 2rem);
+        border-radius: 1.3rem;
+        background: var(--sage);
+        border: 1px solid var(--line);
+      }
+
+      .shortcuts h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+
+      .shortcuts dl {
+        margin-top: 1.1rem;
+      }
+
+      .shortcuts dl div {
+        display: grid;
+        grid-template-columns: 5rem 1fr;
+        align-items: center;
+        gap: 0.45rem 1rem;
+        padding-block: 0.6rem;
+        border-top: 1px solid var(--line);
+      }
+
+      kbd {
+        display: inline-block;
+        min-width: 2rem;
+        padding: 0.05rem 0.45rem;
+        border: 1px solid var(--accent);
+        border-bottom-width: 3px;
+        border-radius: 0.4rem;
+        background: var(--paper);
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .gallery h2 {
+        margin-bottom: 1.2rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .gallery figure {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--sage);
+      }
+
+      .gallery img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 60 / 37;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .gallery figcaption {
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+        font-weight: 650;
+      }
+
+      .faq {
+        grid-template-columns: 1fr 1.65fr;
+        padding-block: 1.75rem;
+        border-block: 1px solid var(--line);
+      }
+
+      .faq details + details {
+        border-top: 1px solid var(--line);
+      }
+
+      .faq summary {
+        padding-block: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .faq p {
+        padding-bottom: 1rem;
+      }
+
+      .footer {
+        padding-block: 1.5rem 2.5rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 50rem) {
+        .intro {
+          grid-template-columns: 1fr;
+        }
+
+        h1 em {
+          display: inline;
+        }
+
+        .intro-copy {
+          max-width: 49ch;
+        }
+      }
+
+      @media (max-width: 38rem) {
+        body {
+          background: linear-gradient(var(--sage) 0 25rem, var(--paper) 25rem);
+        }
+
+        .wrap {
+          width: calc(100% - 1.5rem);
+        }
+
+        .site-header,
+        .site-nav {
+          column-gap: 1rem;
+        }
+
+        .guide,
+        .gallery,
+        .faq,
+        .footer {
+          padding-inline: 0.4rem;
+        }
+
+        .intro {
+          gap: 0.85rem;
+        }
+
+        h1 em {
+          display: block;
+        }
+
+        .player-bar {
+          padding-inline: 0.65rem;
+        }
+
+        .player-actions {
+          column-gap: 0.75rem;
+        }
+
+        .guide,
+        .gallery-grid,
+        .faq {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a href="./" class="wordmark">
+        <img src="icon.png" alt="" width="40" height="40" />
+        Pet the Cat
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#how-to-play">How to play</a>
+        <a href="#screenshots">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="main" class="wrap">
+      <section class="player" id="play" aria-labelledby="player-title">
+        <div class="player-bar">
+          <h2 id="player-title">The cat room</h2>
+          <div class="player-actions">
+            <a href="https://petthecat.io/#play" target="_blank" rel="noopener">Pet More Cats</a>
+            <button type="button" id="fullscreen" aria-controls="play" hidden>Fullscreen</button>
+          </div>
+        </div>
+        <iframe
+          src="https://petthecat.io/#play"
+          title="Pet the Cat game hosted on Petthecat.io"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section class="intro" aria-labelledby="title">
+        <h1 id="title">Free Pet the Cat <em>Online</em></h1>
+        <div class="intro-copy">
+          <p>
+            Pick one of 13 virtual cats and give it a few strokes. Hear it purr, make it chase a
+            feather, or settle in together under the moonlight.
+          </p>
+          <a class="play-link" href="#play">Back to the game</a>
+        </div>
+      </section>
+
+      <section class="section guide" id="how-to-play" aria-labelledby="guide-title">
+        <div>
+          <h2 id="guide-title">How to pet a virtual cat</h2>
+          <h3>Choose your cat</h3>
+          <p>
+            Pick a Siamese, Ragdoll, Siberian, or Norwegian Forest Cat. You can also try an orange
+            tabby, a calico, or one of the other coats. The size and width sliders let you make each
+            cat smaller, bigger, slimmer, or rounder.
+          </p>
+          <h3>Give it a few strokes</h3>
+          <p>
+            Move your mouse or slide a finger over the cat’s head and back. Watch it react to your
+            touch and turn on the speaker in the game to hear meows and purrs.
+          </p>
+          <h3>Try toys, fish treats, and accessories</h3>
+          <p>
+            Wiggle the feather wand or move the laser dot and see if your cat pounces. Complete cat
+            wishes to earn fish treats, then tap the fish button to feed your cat. Try a little
+            crown or sunglasses, or use the moon button to switch to the nighttime room.
+          </p>
+        </div>
+        <aside class="shortcuts" aria-labelledby="shortcuts-title">
+          <h3 id="shortcuts-title">Keyboard shortcuts</h3>
+          <p>Click the cat’s play area first.</p>
+          <dl>
+            <div>
+              <dt><kbd>Space</kbd></dt>
+              <dd>Pet the back</dd>
+            </div>
+            <div>
+              <dt><kbd>T</kbd></dt>
+              <dd>Pet the tail</dd>
+            </div>
+            <div>
+              <dt><kbd>P</kbd></dt>
+              <dd>Pat the cat’s butt</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section gallery" id="screenshots" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Inside the cat room</h2>
+        <div class="gallery-grid">
+          <figure>
+            <picture>
+              <source
+                media="(prefers-reduced-motion: no-preference)"
+                srcset="pet-the-black-cat-petting.webp"
+                width="720"
+                height="444"
+              />
+              <img
+                src="pet-the-cat-daylight-room.webp"
+                alt="Black cat on a sunlit linen cushion"
+                width="1200"
+                height="740"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption>A sunny spot on the cushion</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source
+                media="(prefers-reduced-motion: no-preference)"
+                srcset="pet-the-orange-tabby-laser-play.webp"
+                width="720"
+                height="444"
+              />
+              <img
+                src="pet-the-cat-laser-pointer.webp"
+                alt="Orange tabby playing with a red laser dot"
+                width="1200"
+                height="740"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption>Laser play with the orange tabby</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="pet-the-ragdoll-cat-petting.webp"
+              alt="Fluffy Ragdoll with gray ears and tail resting on a linen cushion"
+              width="720"
+              height="444"
+              loading="lazy"
+            />
+            <figcaption>The Ragdoll and its fluffy tail</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source
+                media="(prefers-reduced-motion: no-preference)"
+                srcset="pet-the-black-cat-moonlight-petting.webp"
+                width="720"
+                height="444"
+              />
+              <img
+                src="pet-the-cat-moonlight-room.webp"
+                alt="Black cat on a cushion in blue moonlight"
+                width="1200"
+                height="740"
+                loading="lazy"
+              />
+            </picture>
+            <figcaption>The room after dark</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions about your cat</h2>
+        <div>
+          <details>
+            <summary>Is Pet the Cat free to play online?</summary>
+            <p>
+              Yes. The game runs in your browser on a phone or computer, with no download or
+              account.
+            </p>
+          </details>
+          <details>
+            <summary>How do I become best friends with a cat?</summary>
+            <p>
+              Spend time petting your chosen cat. Your bond starts at Shy and grows through Curious,
+              Friendly, and Affectionate before reaching Best friends.
+            </p>
+          </details>
+          <details>
+            <summary>Where can I see how long I’ve spent with each cat?</summary>
+            <p>
+              Open Stats &amp; Collection in the game to find your Petting Journal. It shows the
+              cats you’ve met and your time with each one. Progress is saved in your browser when
+              storage is available. The embedded player and the main site may have separate
+              journals.
+            </p>
+          </details>
+          <details>
+            <summary>How can I hear my cat purr?</summary>
+            <p>
+              Turn on the speaker in the game, then stroke your cat slowly. If the game is still
+              quiet, tap or click the play area so your browser can activate sound.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <span>Pet the Cat Online</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://petthecat.io/" target="_blank" rel="noopener">Play Pet the Cat</a>
+      </nav>
+    </footer>
+
+    <script>
+      const player = document.getElementById("play");
+      const fullscreenButton = document.getElementById("fullscreen");
+
+      if (document.fullscreenEnabled && player.requestFullscreen) {
+        fullscreenButton.hidden = false;
+
+        document.addEventListener("fullscreenchange", () => {
+          fullscreenButton.textContent =
+            document.fullscreenElement === player ? "Exit fullscreen" : "Fullscreen";
+        });
+
+        fullscreenButton.addEventListener("click", async () => {
+          try {
+            if (document.fullscreenElement === player) {
+              await document.exitFullscreen();
+            } else {
+              await player.requestFullscreen();
+            }
+          } catch {
+            fullscreenButton.hidden = true;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
